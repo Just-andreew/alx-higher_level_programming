@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-a backtracking program that prints the coordinates of n queens
+nqueens backtracking program to print the coordinates of n queens
 on an nxn grid such that they are all in non-attacking positions
 """
 
@@ -25,7 +25,7 @@ if __name__ == "__main__":
         a.append([i, None])
 
     def already_exists(y):
-        """checks that a queen doesnt already exist in that y value"""
+        """check that a queen does not already exist in that y value"""
         for x in range(n):
             if y == a[x][1]:
                 return True
@@ -43,7 +43,7 @@ if __name__ == "__main__":
         return True
 
     def clear_a(x):
-        """clears the answers from the point of failure onward"""
+        """clears the answers from the point of failure on"""
         for i in range(x, n):
             a[i][1] = None
 
