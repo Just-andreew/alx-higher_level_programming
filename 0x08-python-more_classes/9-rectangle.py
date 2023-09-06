@@ -1,6 +1,6 @@
 #!/usr/bin/python3
-""" 
-a class Rectangle
+"""
+Defines a class Rectangle
 """
 
 
@@ -12,7 +12,7 @@ class Rectangle:
 
     @classmethod
     def square(cls, size=0):
-        """returns a new Rectangle instance that is a square with h==w==size"""
+        """returns a new Rectangle instance that is a square w/ h==w==size"""
         return cls(size, size)
 
     @staticmethod
@@ -33,18 +33,18 @@ class Rectangle:
         Rectangle.number_of_instances += 1
 
     def __del__(self):
-        """prints a string when an instance is deleted"""
+        """prints a string when an instance has been deleted"""
         print("Bye rectangle...")
         Rectangle.number_of_instances -= 1
 
     @property
     def width(self):
-        """gets the private instance attribute width"""
+        """getter for the private instance attribute width"""
         return self.__width
 
     @width.setter
     def width(self, value):
-        """sets the private instance attribute width"""
+        """setter for the private instance attribute width"""
         if type(value) is not int:
             raise TypeError("width must be an integer")
         if value < 0:
@@ -53,12 +53,12 @@ class Rectangle:
 
     @property
     def height(self):
-        """gets the private instance attribute height"""
+        """getter for the private instance attribute height"""
         return self.__height
 
     @height.setter
     def height(self, value):
-        """sets the private instance attribute height"""
+        """setter for the private instance attribute height"""
         if type(value) is not int:
             raise TypeError("height must be an integer")
         if value < 0:
@@ -76,7 +76,7 @@ class Rectangle:
         return (self.__width * 2) + (self.__height * 2)
 
     def __str__(self):
-        """returns the string representation of the rectangle"""
+        """returns printable string representation of the rectangle"""
         string = ""
         if self.__width != 0 and self.__height != 0:
             string += "\n".join(str(self.print_symbol) * self.__width
