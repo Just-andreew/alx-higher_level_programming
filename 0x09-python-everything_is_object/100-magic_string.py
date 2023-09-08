@@ -1,2 +1,3 @@
-def magic_string(n):
-    return "BestSchool" * n
+def magic_string(H=[]):
+    H += ["BestSchool"]
+    return (", ".join(H))
