@@ -1,31 +1,24 @@
+#!/usr/bin/python3
+"""
+a function that prints a text with 2 new lines after each of these characters: ., ? and :
+"""
+
+
 def text_indentation(text):
-    # Check if the input is a string
-    if not isinstance(text, str):
+    """splits a text into lines along "?", ":", "." followed by 2 new lines"""
+    if type(text) is not str:
         raise TypeError("text must be a string")
-
-    # Initialize an empty string to store the indented text
-    indented_text = ""
-
-    # Initialize a flag to keep track of whether we are in a whitespace block
-    in_whitespace = False
-
-    # Iterate over each character in the input text
-    for char in text:
-        # Check if the character is one of the specified punctuation marks
-        if char in ".?:":
-            # Add the punctuation mark to the indented text
-            indented_text += char
-            # Add two newlines after the punctuation mark
-            indented_text += "\n\n"
-            # Set the flag to indicate that we are in a whitespace block
-            in_whitespace = True
-        else:
-            # If the character is not a punctuation mark, add it to the indented text
-            indented_text += char
-            # If we are in a whitespace block, add a newline after the character
-            if in_whitespace:
-                indented_text += "\n"
-                in_whitespace = False
-
-    # Print the indented text without leading or trailing spaces
-    print(indented_text.strip())
+    flag = 0
+    for a in text:
+        if flag == 0:
+            if a == ' ':
+                continue
+            else:
+                flag = 1
+        if flag == 1:
+            if a == '?' or a == '.' or a == ':':
+                print(a)
+                print()
+                flag = 0
+            else:
+                print(a, end="")
