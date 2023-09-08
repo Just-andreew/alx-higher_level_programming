@@ -4,20 +4,20 @@ The ``3-say_my_name`` module
 Using ``say_my_name``
 -------------------
 
-Importing the function from the module:
+Importing the function:
 	>>> say_my_name = __import__("3-say_my_name").say_my_name
 
-Checking for module docstring:
+Checking module docstring:
 	 >>> m = __import__("3-say_my_name").__doc__
 	 >>> len(m) > 1
 	 True
 
-Checking for function docstring:
+Checking function docstring:
 	 >>> f = __import__("3-say_my_name").say_my_name.__doc__
          >>> len(f) > 1
          True
 
-Checking for passing None as first name:
+Checking passing None as first name:
 	 >>> say_my_name(None, "Hello")
 	 Traceback (most recent call last):
          ...
@@ -35,7 +35,7 @@ Checking for wrong type as first name:
          ...
          TypeError: first_name must be a string
 
-Checking for wrong type as last name:
+Checking for wrong type as the last name:
          >>> say_my_name("Hello", [4])
          Traceback (most recent call last):
          ...
