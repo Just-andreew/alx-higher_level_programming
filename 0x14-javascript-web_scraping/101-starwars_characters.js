@@ -1,7 +1,5 @@
-#!/usr/bin/python3
-"""
-Script to print characters of a Star Wars movie using the Star Wars API.
-"""
+#!/usr/bin/node
+//Script to print characters of a Star Wars movie using the Star Wars API.
 
 import requests
 import sys
