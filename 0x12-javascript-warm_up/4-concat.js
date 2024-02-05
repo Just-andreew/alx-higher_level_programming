@@ -9,4 +9,3 @@ const arg2 = args[1] || 'undefined';
 
 // Print the arguments in the specified format
 console.log(`${arg1} is ${arg2}`);
-
