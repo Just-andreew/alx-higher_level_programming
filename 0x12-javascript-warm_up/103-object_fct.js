@@ -1,24 +1,17 @@
-// 103-object_fct.js
 #!/usr/bin/node
-
 const myObject = {
   type: 'object',
   value: 12
 };
-
 console.log(myObject);
 
-// Define the incr function
-myObject.incr = function() {
-  this.value++; // Increment the value property of the object
+myObject.incr = function () {
+  this.value++;
 };
 
-myObject.incr(); // Call the incr function
+myObject.incr();
 console.log(myObject);
-
-myObject.incr(); // Call the incr function again
+myObject.incr();
 console.log(myObject);
-
-myObject.incr(); // Call the incr function once more
+myObject.incr();
 console.log(myObject);
-
